@@ -1,9 +1,13 @@
 import time
-import json
+import os
 import RPi.GPIO as GPIO
 from datetime import datetime
 from pubnub.pnconfiguration import PNConfiguration
 from pubnub.pubnub import PubNub
+from dotenv import load_dotenv
+
+# load environment variables
+load_dotenv()
 
 # gpio configuration
 PIR_PIN = 17  # gpio17 = physical pin 11
@@ -14,13 +18,13 @@ GPIO.setup(PIR_PIN, GPIO.IN)
 
 # pubnub configuration
 pnconfig = PNConfiguration()
-pnconfig.publish_key = "pub-c-bf7be660-7908-41c6-90ce-850d9c4735af"
-pnconfig.subscribe_key = "sub-c-f024b181-2f5f-46df-8d31-fd2be07004d1"
-pnconfig.uuid = "raspberry-pi-zero-w-motion-node"
+pnconfig.publish_key = os.getenv("PUBNUB_PUBLISH_KEY")
+pnconfig.subscribe_key = os.getenv("PUBNUB_SUBSCRIBE_KEY")
+pnconfig.uuid = os.getenv("PUBNUB_UUID")
 
 pubnub = PubNub(pnconfig)
 
-CHANNEL = "temperature-sensor" 
+CHANNEL = os.getenv("PUBNUB_CHANNEL")
 
 def get_cpu_temperature():
     # returns cpu temperature rounded to one decimal place
