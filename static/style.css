@@ -10,14 +10,15 @@ body {
     margin: 40px auto;
     background-color: #ffffff;
     padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+    border-radius: 14px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
 }
 
 h1 {
     text-align: center;
     margin-bottom: 30px;
     color: #4a4a4a;
+    font-weight: 600;
 }
 
 table {
@@ -27,23 +28,28 @@ table {
 
 th,
 td {
-    padding: 12px;
-    border-bottom: 1px solid #e0dcdc;
+    padding: 14px;
+    border-bottom: 1px solid #e6e2e2;
     text-align: center;
     color: #444444;
 }
 
 th {
-    background-color: #F2E6E6; 
+    background-color: #F3F6F0;
     font-weight: bold;
 }
 
+tr:nth-child(even) {
+    background-color: #F0F6F6;
+}
+
 tr:hover {
-    background-color: #F9EEEE; 
+    background-color: #F3F0F6;
 }
 
 .empty {
     text-align: center;
     color: #888888;
     font-style: italic;
+    padding: 40px 0;
 }
