@@ -9,6 +9,13 @@
 
 <div class="container">
     <h1>IoT Motion Detection Dashboard</h1>
+        {% if user %}
+            <div class="user-info">
+                Logged in as: <strong>{{ user.name }}</strong> |
+                <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+            </div>
+        {% endif %}
+    </header>
 
     {% if events %}
         <table>

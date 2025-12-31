@@ -8,10 +8,10 @@ body {
 .container {
     max-width: 1000px;
     margin: 40px auto;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     padding: 30px;
-    border-radius: 14px;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    border-radius: 15px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
 }
 
 h1 {
@@ -19,6 +19,29 @@ h1 {
     margin-bottom: 30px;
     color: #4a4a4a;
     font-weight: 600;
+}
+
+.user-info {
+    text-align: center;
+    font-size: 1em;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+.logout-btn {
+    text-decoration: none;
+    /* color: #ffffff; */
+    color: #5a4a6a;
+    background-color: #E6DFF0;
+    padding: 4px 10px;
+    border-radius: 8px;
+    margin-left: 5px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.logout-btn:hover {
+    background-color: #D8CFE6;
 }
 
 table {
