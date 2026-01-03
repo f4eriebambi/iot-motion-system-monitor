@@ -76,3 +76,18 @@ tr:hover {
     font-style: italic;
     padding: 40px 0;
 }
+
+.clear-btn {
+    text-decoration: none;
+    color: #4a4a4a;
+    background-color: #E0E4E8;
+    padding: 4px 10px;
+    border-radius: 8px;
+    margin-left: 5px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.clear-btn:hover {
+    background-color: #CDD5DD;
+}

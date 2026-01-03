@@ -12,7 +12,8 @@
         {% if user %}
             <div class="user-info">
                 Logged in as: <strong>{{ user.name }}</strong> |
-                <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+                <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a> |
+                <a href="{{ url_for('clear_events') }}" class="clear-btn" onclick="return confirm('Clear all motion events from dashboard?');">Clear Dashboard</a>
             </div>
         {% endif %}
     </header>
